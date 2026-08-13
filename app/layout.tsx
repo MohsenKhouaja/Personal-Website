@@ -32,8 +32,8 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Skander's Porfolio",
-  description: "Skander Karoui's minimalistic porfolio",
+  title: "Skander's Portfolio",
+  description: "Skander Karoui's minimalistic portfolio",
   icons: {
     icon: [
       {
