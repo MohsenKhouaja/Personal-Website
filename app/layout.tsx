@@ -34,7 +34,7 @@ const lora = Lora({
 export const metadata: Metadata = {
   title: "Mohsen Khouaja | Portfolio",
   description:
-    "Mohsen Khouaja's software engineering and telecommunications portfolio",
+    "Mohsen Khouaja's software engineering portfolio",
   icons: {
     icon: [
       {

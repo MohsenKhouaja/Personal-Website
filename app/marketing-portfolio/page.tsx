@@ -18,6 +18,7 @@ const projects = [
   },
   {
     title: "Warehouse Management System at Lanci LLC",
+    href: "https://lanci.tn/",
     description:
       "Full-stack operational workflows for delivery handoff, fulfillment, zone management, and exception tracking across warehouse teams and drivers.",
     stack: "React, Vite, TypeScript, tRPC, PostgreSQL, Docker, CI/CD",
@@ -46,7 +47,20 @@ export default function MarketingPortfolio() {
         <main className="space-y-6">
           {projects.map((project) => (
             <article key={project.title} className="rounded-md border p-6">
-              <h2 className="text-2xl font-semibold">{project.title}</h2>
+              <h2 className="text-2xl font-semibold">
+                {project.href ? (
+                  <Link
+                    href={project.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
+                  >
+                    {project.title}
+                  </Link>
+                ) : (
+                  project.title
+                )}
+              </h2>
               <p className="mt-3 text-muted-foreground">
                 {project.description}
               </p>

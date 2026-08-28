@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Phone } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -46,12 +46,11 @@ export function PortfolioComponent() {
             Mohsen Khouaja
           </h1>
           <p className="text-lg text-muted-foreground md:text-xl">
-            Full-Stack Software Engineer &amp; Telecommunications Engineering
-            Student at SUP&apos;COM
+            Full-Stack Software Engineer &amp; Engineering Student at SUP&apos;COM
           </p>
           <p className="mx-auto mb-4 mt-2 max-w-2xl text-lg text-muted-foreground md:text-xl">
             Building reliable full-stack systems with{" "}
-            <span className="font-bold text-primary">React</span>,{" "}
+            <span className="font-bold text-primary">Python</span>,{" "}
             <span className="font-bold text-primary">TypeScript</span>, and{" "}
             <span className="font-bold text-primary">PostgreSQL</span>.
           </p>
@@ -64,9 +63,6 @@ export function PortfolioComponent() {
             </Link>
             <Link href="#projects" className="hover:underline">
               Projects
-            </Link>
-            <Link href="/timeline" className="hover:underline">
-              Timeline
             </Link>
             <Link href="#contact" className="hover:underline">
               Contact
@@ -111,9 +107,9 @@ export function PortfolioComponent() {
         <main className="space-y-16">
           <section id="about" className="text-center">
             <p className="text-primary">
-              I&apos;m a software engineer and telecommunications engineering
-              student focused on practical full-stack products. My recent work
-              includes warehouse and delivery workflows, collaborative
+              I&apos;m a software engineer and engineering student focused on
+              practical full-stack products. My recent work includes warehouse
+              and delivery workflows, collaborative
               presentation tools, and observable multi-agent systems.
             </p>
           </section>
@@ -122,7 +118,17 @@ export function PortfolioComponent() {
             <h2 className="mb-6 text-2xl font-semibold">Experience</h2>
             <ul className="list-disc space-y-3 pl-5">
               <li>
-                <strong>Full-Time Software Engineer at Lanci LLC</strong>{" "}
+                <strong>
+                  Full-Time Software Engineer at{" "}
+                  <a
+                    href="https://lanci.tn/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
+                  >
+                    Lanci LLC
+                  </a>
+                </strong>{" "}
                 <span className="text-muted-foreground">
                   (Jul 2026 - Present)
                 </span>
@@ -134,7 +140,17 @@ export function PortfolioComponent() {
                 CI/CD.
               </li>
               <li>
-                <strong>Part-Time Full-Stack Developer at Lanci LLC</strong>{" "}
+                <strong>
+                  Part-Time Full-Stack Developer at{" "}
+                  <a
+                    href="https://lanci.tn/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
+                  >
+                    Lanci LLC
+                  </a>
+                </strong>{" "}
                 <span className="text-muted-foreground">
                   (Feb 2026 - Jul 2026)
                 </span>
@@ -144,7 +160,17 @@ export function PortfolioComponent() {
                 PostgreSQL services with RBAC and automated CI/CD workflows.
               </li>
               <li>
-                <strong>Full-Stack Software Engineer Intern at Lanci LLC</strong>{" "}
+                <strong>
+                  Full-Stack Software Engineer Intern at{" "}
+                  <a
+                    href="https://lanci.tn/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
+                  >
+                    Lanci LLC
+                  </a>
+                </strong>{" "}
                 <span className="text-muted-foreground">
                   (Jul 2025 - Sep 2025)
                 </span>
@@ -157,54 +183,98 @@ export function PortfolioComponent() {
           </section>
 
           <section id="projects">
-            <h2 className="mb-6 text-2xl font-semibold">Projects</h2>
-            <ul className="list-disc space-y-3 pl-5">
-              <li>
-                <strong>MarkDeck</strong>: multi-user presentation application
-                that turns LLM-generated Markdown into structured slide decks.
-                Built with React, Vite, TypeScript, Node.js, Express, and MySQL;
-                includes RBAC sharing, Dockerized services, CI/CD, and Grafana
-                and Loki observability. {" "}
-                <a
-                  href="https://github.com/MohsenKhouaja/AI-Powered-Presentation-Generator"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="link-blue"
-                >
-                  View repository
-                </a>
-                .
-              </li>
-              <li>
-                <strong>SREs</strong>: multi-agent incident-response system for
-                site reliability engineers. Python, LangGraph, and LangChain
-                agents investigate logs, metrics, and events in parallel; human
-                approval gates remediation. The stack includes Next.js, FastAPI,
-                MongoDB, Prometheus, Loki, Docker Compose, and Dokploy CI/CD. {" "}
-                <a
-                  href="https://github.com/MohsenKhouaja/SREs"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="link-blue"
-                >
-                  View repository
-                </a>
-                .
-              </li>
-              <li>
-                <strong>Competitive Programming</strong>: Codeforces Pupil with
-                max rating 1292.{" "}
-                <a
-                  href="https://codeforces.com/profile/MohsenKhouaja"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="link-blue"
-                >
-                  See profile
-                </a>
-                .
-              </li>
-            </ul>
+            <div className="mb-6 flex items-end justify-between gap-4">
+              <h2 className="text-2xl font-semibold">Selected Projects</h2>
+              <span className="hidden text-sm text-muted-foreground sm:block">
+                Product work &amp; systems thinking
+              </span>
+            </div>
+            <div className="divide-y divide-border border-y border-border">
+              <article className="py-7 first:pt-6">
+                <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+                  <div className="max-w-xl">
+                    <h3 className="text-xl font-semibold text-balance">
+                      MarkDeck
+                    </h3>
+                    <p className="mt-2 leading-7 text-muted-foreground text-pretty">
+                      A collaborative presentation workspace that turns
+                      LLM-generated Markdown into structured slide decks.
+                      React, Vite, TypeScript, Node.js, Express, and MySQL;
+                      with role-based sharing, Dockerized services, CI/CD, and
+                      Grafana/Loki observability.
+                    </p>
+                  </div>
+                  <div className="flex shrink-0 flex-wrap gap-x-4 gap-y-2 text-sm font-medium">
+                    <a
+                      href="https://markdeck.xyz/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-primary underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
+                    >
+                      Visit site <ArrowUpRight className="h-3.5 w-3.5" />
+                    </a>
+                    <a
+                      href="https://github.com/MohsenKhouaja/MarkDeck"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-muted-foreground underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
+                    >
+                      Repository <Github className="h-3.5 w-3.5" />
+                    </a>
+                  </div>
+                </div>
+              </article>
+              <article className="py-7">
+                <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+                  <div className="max-w-xl">
+                    <h3 className="text-xl font-semibold text-balance">SREs</h3>
+                    <p className="mt-2 leading-7 text-muted-foreground text-pretty">
+                      A multi-agent incident-response system for site reliability
+                      engineers. Python, LangGraph, and LangChain agents inspect
+                      logs, metrics, and events in parallel, while human approval
+                      gates remediation. Built with Next.js, FastAPI, MongoDB,
+                      Prometheus, Loki, Docker Compose, and Dokploy CI/CD.
+                    </p>
+                  </div>
+                  <div className="flex shrink-0 flex-wrap gap-x-4 gap-y-2 text-sm font-medium">
+                    <a
+                      href="https://trysres.xyz/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-primary underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
+                    >
+                      Visit site <ArrowUpRight className="h-3.5 w-3.5" />
+                    </a>
+                    <a
+                      href="https://github.com/MohsenKhouaja/SREs"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-muted-foreground underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
+                    >
+                      Repository <Github className="h-3.5 w-3.5" />
+                    </a>
+                  </div>
+                </div>
+              </article>
+              <article className="py-7 last:pb-6">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-baseline sm:justify-between">
+                  <p className="max-w-xl leading-7 text-muted-foreground text-pretty">
+                    <span className="font-semibold text-foreground">
+                      Competitive Programming
+                    </span>{" "}
+                    — Codeforces Pupil with a maximum rating of 1292.
+                  </p>
+                  <a
+                    href="https://codeforces.com/profile/MohsenKhouaja"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex shrink-0 items-center gap-1 text-sm font-medium text-muted-foreground underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
+                  >
+                    See profile <ArrowUpRight className="h-3.5 w-3.5" />
+                  </a>
+                </div>
+              </article>
+            </div>
           </section>
 
           <section id="education">
@@ -252,10 +322,6 @@ export function PortfolioComponent() {
               <li>
                 First place winner at the ISI Contest.
               </li>
-              <li>
-                Certified in OOP as it should be and SQL: Concepts and
-                Practice.
-              </li>
             </ul>
           </section>
 
@@ -297,7 +363,7 @@ export function PortfolioComponent() {
         </main>
 
         <footer className="mt-16 text-center text-muted-foreground">
-          <p>Last updated: 24 Aug 2026</p>
+          <p>Last updated: 28 Aug 2026</p>
         </footer>
       </div>
     </div>
