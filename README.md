@@ -1,9 +1,9 @@
-Hey, look who's here!
+# Mohsen Khouaja Portfolio
 
-I'm Skander, a telecommunication engineering student in ENET'Com, Tunisia and interested in AI and Software Engineering.
+This is my personal portfolio website.
 
-This is the repo for my portfolio website, feel free to look around and give me feedback. It's built with Next.js, TailwindCSS and hosted on Vercel.
+I am Mohsen Khouaja, a full-stack software engineer at Lanci LLC and a telecommunications engineering student at SUP'COM. I build reliable systems with React, TypeScript, Node.js, PostgreSQL, Python, Docker, and observability tooling.
 
-If you're wandering about the domain .xyz, check this website for good deals: https://tld-list.com/
+The site is built with Next.js, Tailwind CSS, and Vercel Analytics.
 
-Until next time.
+Last updated: 24 Aug 2026.

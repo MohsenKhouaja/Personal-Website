@@ -1,16 +1,16 @@
 [
-    {
-      "id": 1,
-      "title": "Movie Recommendation System",
-      "description":"",
-      "content": "Recommendation system that explores content-based, user-based, collaborative filtering and item-based collaborative filtering",
-      "link": "https://github.com/skanderkaroui/collaborative_filtering_movie_recommendation"
-    },
-    {
-      "id": 2,
-      "title": "AI Voice Assistant",
-      "description": "AI Voice Assistant ",
-      "content": "An e-commerce platform connecting artisans with customers, powered by Next.js and Stripe.",
-      "link": "#"
-    }
-  ]
+  {
+    "id": 1,
+    "title": "MarkDeck",
+    "description": "Multi-user presentation platform",
+    "content": "React, Vite, and TypeScript application that converts LLM-generated Markdown into structured slide decks. Features a Node.js/Express/MySQL API, RBAC sharing, Dockerized services, CI/CD, and Grafana/Loki observability.",
+    "link": "https://github.com/MohsenKhouaja/AI-Powered-Presentation-Generator"
+  },
+  {
+    "id": 2,
+    "title": "SREs",
+    "description": "Multi-agent incident response system",
+    "content": "Python, LangGraph, and LangChain agents investigate simulated production incidents using logs, metrics, and service events. Includes human-approved remediation, a Next.js interface, FastAPI, MongoDB, Prometheus, Loki, Docker Compose, and Dokploy deployment.",
+    "link": "https://github.com/MohsenKhouaja/SREs"
+  }
+]

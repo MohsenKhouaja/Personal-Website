@@ -32,12 +32,13 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Skander's Portfolio",
-  description: "Skander Karoui's minimalistic portfolio",
+  title: "Mohsen Khouaja | Portfolio",
+  description:
+    "Mohsen Khouaja's software engineering and telecommunications portfolio",
   icons: {
     icon: [
       {
-        url: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥶</text></svg>",
+        url: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='.72em' text-anchor='middle' font-size='70'>MK</text></svg>",
         type: 'image/svg+xml',
       },
     ],

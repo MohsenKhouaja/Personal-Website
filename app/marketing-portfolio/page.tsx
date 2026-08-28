@@ -1,192 +1,80 @@
-import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Github, Mail } from "lucide-react";
 import Link from "next/link";
 
-const embeddableSocialPosts = [
+import { Button } from "@/components/ui/button";
+
+const projects = [
   {
-    title: "Instagram Reel",
-    src: "https://www.instagram.com/reel/DAwD0-WunRu/embed",
+    title: "MarkDeck",
+    description:
+      "Multi-user application that turns LLM-generated Markdown into structured presentation decks, with secure sharing and observable production services.",
+    stack: "React, Vite, TypeScript, Node.js, Express, MySQL, Docker, Grafana, Loki",
   },
   {
-    title: "Instagram Reel 1",
-    src: "https://www.instagram.com/p/C358VPeI8Um/embed",
+    title: "SREs",
+    description:
+      "Multi-agent incident response platform that investigates logs, metrics, and events in parallel, with human-approved remediation and auditable decisions.",
+    stack: "Python, LangGraph, LangChain, Next.js, FastAPI, MongoDB, Prometheus, Loki",
   },
   {
-    title: "Instagram Reel 2",
-    src: "https://www.instagram.com/p/C3vVsZaoM_G/embed",
-  },
-  {
-    title: "Instagram Post 1",
-    src: "https://www.instagram.com/p/C0r-AriIs_-/embed",
-  },
-  {
-    title: "Instagram Post 2",
-    src: "https://www.instagram.com/p/CxgnjMGoDMJ/embed",
-  },
-  {
-    title: "Instagram Post 3",
-    src: "https://www.instagram.com/p/CxqtWLuocPu/embed",
+    title: "Warehouse Management System at Lanci LLC",
+    description:
+      "Full-stack operational workflows for delivery handoff, fulfillment, zone management, and exception tracking across warehouse teams and drivers.",
+    stack: "React, Vite, TypeScript, tRPC, PostgreSQL, Docker, CI/CD",
   },
 ];
-
-const facebookEmbedUrl =
-  "https://www.facebook.com/plugins/post.php?href=https://fb.watch/xhWaJoAgxo/";
-
-const renderInstagramPost = (
-  src: string,
-  title: string,
-  containerClass = "max-w-[340px] w-full aspect-[9/16]"
-) => (
-  <div
-    key={src}
-    className={`${containerClass} mx-auto relative bg-secondary rounded-lg overflow-hidden`}
-  >
-    <iframe
-      src={src}
-      title={title}
-      className="w-full h-full"
-      loading="lazy"
-      frameBorder="0"
-      allowFullScreen
-    ></iframe>
-  </div>
-);
 
 export default function MarketingPortfolio() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        {/* Back Button */}
+      <div className="mx-auto max-w-4xl px-4 py-8">
         <Button variant="ghost" asChild className="mb-8">
           <Link href="/">
-            <ArrowLeft className="h-4 w-4 mr-2" />
+            <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Home
           </Link>
         </Button>
 
-        {/* Header */}
-        <header className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4">Marketing Portfolio</h1>
-          <p className="text-xl text-muted-foreground">
-            A collection of my marketing projects and achievements
+        <header className="mb-12">
+          <h1 className="mb-4 text-4xl font-bold">Technical Portfolio</h1>
+          <p className="max-w-2xl text-xl text-muted-foreground">
+            Selected engineering work across full-stack product development,
+            collaborative systems, delivery workflows, and C++ fundamentals.
           </p>
         </header>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Social Media Content Creation */}
-          <div className="border rounded-lg p-6 hover:shadow-lg transition-shadow col-span-full">
-            <h3 className="text-2xl font-semibold mb-4">Social Media Content Creation</h3>
-            <p className="text-muted-foreground mb-4">
-              Created and managed social media content resulting in over 85k reach and 1k+ follower growth within a year.
-            </p>
+        <main className="space-y-6">
+          {projects.map((project) => (
+            <article key={project.title} className="rounded-md border p-6">
+              <h2 className="text-2xl font-semibold">{project.title}</h2>
+              <p className="mt-3 text-muted-foreground">
+                {project.description}
+              </p>
+              <p className="mt-4 text-sm font-medium">{project.stack}</p>
+            </article>
+          ))}
+        </main>
 
-            <div className="space-y-6">
-              <div>
-                <h4 className="font-semibold mb-3">Personal Content</h4>
-                {renderInstagramPost(
-                  embeddableSocialPosts[0].src,
-                  embeddableSocialPosts[0].title,
-                )}
-              </div>
-
-              <div>
-                <h4 className="font-semibold mb-3">University Club Content</h4>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  {/* Reels */}
-                  <div className="space-y-8">
-                    <h5 className="font-medium mb-3">Reels</h5>
-                    {renderInstagramPost(
-                      embeddableSocialPosts[1].src,
-                      embeddableSocialPosts[1].title,
-                    )}
-                    {renderInstagramPost(
-                      embeddableSocialPosts[2].src,
-                      embeddableSocialPosts[2].title,
-                    )}
-                  </div>
-
-                  {/* Square Posts */}
-                  <div className="space-y-4">
-                    <h5 className="font-medium mb-3">Posts</h5>
-                    {renderInstagramPost(
-                      embeddableSocialPosts[3].src,
-                      embeddableSocialPosts[3].title,
-                      "max-w-[340px] w-full aspect-square",
-                    )}
-                    {renderInstagramPost(
-                      embeddableSocialPosts[4].src,
-                      embeddableSocialPosts[4].title,
-                      "max-w-[340px] w-full aspect-square",
-                    )}
-                    {renderInstagramPost(
-                      embeddableSocialPosts[5].src,
-                      embeddableSocialPosts[5].title,
-                      "max-w-[340px] w-full aspect-square",
-                    )}
-                  </div>
-                </div>
-
-                {/* Facebook Content */}
-                <div className="mt-8 space-y-6">
-                  <h5 className="font-medium mb-3">Facebook Content</h5>
-                  <div className="max-w-[500px] w-full aspect-video mx-auto relative bg-secondary rounded-lg overflow-hidden">
-                    <iframe
-                      src={facebookEmbedUrl}
-                      title="Facebook post"
-                      className="w-full h-full"
-                      loading="lazy"
-                      frameBorder="0"
-                      allowFullScreen
-                    ></iframe>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-4">
-                <h4 className="font-semibold mb-2">Key Achievements</h4>
-                <ul className="list-disc pl-5 space-y-2">
-                  <li>Generated over 85,000 reach across platforms</li>
-                  <li>Grew follower base by 1,000+ within one year</li>
-                  <li>Created and edited engaging video content for both personal brand and university club</li>
-                  <li>Maintained consistent posting schedule across multiple platforms</li>
-                </ul>
-              </div>
-            </div>
+        <section className="mt-12">
+          <h2 className="mb-4 text-2xl font-semibold">Let&apos;s Connect</h2>
+          <div className="flex flex-wrap gap-3">
+            <Button asChild>
+              <Link href="mailto:mohsen.khouaja@supcom.tn">
+                <Mail className="mr-2 h-4 w-4" />
+                Email me
+              </Link>
+            </Button>
+            <Button variant="outline" asChild>
+              <Link
+                href="https://github.com/MohsenKhouaja"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="mr-2 h-4 w-4" />
+                GitHub
+              </Link>
+            </Button>
           </div>
-
-          {/* Skills Section */}
-          <section className="mt-16">
-            <h2 className="text-2xl font-semibold mb-6">Marketing Skills</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[
-                "Social Media Marketing",
-                "Content Strategy",
-                "Community Management",
-                "Digital Marketing",
-              ].map((skill) => (
-                <div
-                  key={skill}
-                  className="bg-secondary p-3 rounded-md text-center text-sm"
-                >
-                  {skill}
-                </div>
-              ))}
-            </div>
-          </section>
-        </div>
-
-        {/* Contact Section */}
-        <section className="mt-16 text-center">
-          <h2 className="text-2xl font-semibold mb-4">Let's Connect</h2>
-          <p className="mb-6">
-            Interested in working together? Let's discuss your marketing needs.
-          </p>
-          <Button asChild>
-            <Link href="mailto:skander.karoui@gmail.com">
-              Get in Touch
-            </Link>
-          </Button>
         </section>
       </div>
     </div>

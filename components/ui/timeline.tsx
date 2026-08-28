@@ -8,7 +8,6 @@ import {
   HTMLAttributes,
   ReactElement,
   useContext,
-  useEffect,
   useLayoutEffect,
   useRef,
   useState
@@ -283,7 +282,6 @@ export default function Timeline({
         className
       )}
       role="list"
-      aria-orientation={orientation}
       aria-label="Timeline"
       {...props}
     >
@@ -319,7 +317,7 @@ export default function Timeline({
       >
         <TlCtxt.Provider value={contextVal}>
           {Children.map(children, (child, index) =>
-            cloneElement(child as ReactElement<any>, { index })
+            cloneElement(child as ReactElement<_timelineItemProps>, { index })
           )}
         </TlCtxt.Provider>
       </ul>

@@ -49,8 +49,12 @@ export function BlogEmailSubscribeForm() {
       }
 
       if (parsed.email) {
-        setSubmittedEmail(parsed.email);
-        setStatus("success");
+        const timeoutId = window.setTimeout(() => {
+          setSubmittedEmail(parsed.email);
+          setStatus("success");
+        }, 0);
+
+        return () => window.clearTimeout(timeoutId);
       }
     } catch {
       localStorage.removeItem(storageKey);

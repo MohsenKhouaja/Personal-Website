@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import blogPosts from "@/app/data/blogpost.json";
 import { Button } from "@/components/ui/button";
 import { Calendar, ChevronLeft, Clock } from "lucide-react";
@@ -38,40 +39,52 @@ export default function BlogPage() {
         </div>
 
         <main>
-          <section className="divide-y divide-border">
-            {posts.map((post) => (
-              <article key={post.id} className="py-6 first:pt-0">
-                <div className="flex flex-col gap-4 md:flex-row md:items-start md:gap-6">
-                  <div className="min-w-0 flex-1">
-                    <Link href={`/blog/${post.titleUrl}`} className="group block">
-                      <h2 className="text-2xl md:text-3xl leading-tight font-semibold group-hover:underline">
-                        {post.title}
-                      </h2>
-                      <p className="mt-3 text-base md:text-lg text-muted-foreground">
-                        {post.description}
-                      </p>
-                    </Link>
-                    <div className="mt-4 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
-                      <Calendar className="h-4 w-4" />
-                      <span>{post.date}</span>
-                      <span>•</span>
-                      <Clock className="h-4 w-4" />
-                      <span>{post.readTime}</span>
+          {posts.length > 0 ? (
+            <section className="divide-y divide-border">
+              {posts.map((post) => (
+                <article key={post.id} className="py-6 first:pt-0">
+                  <div className="flex flex-col gap-4 md:flex-row md:items-start md:gap-6">
+                    <div className="min-w-0 flex-1">
+                      <Link href={`/blog/${post.titleUrl}`} className="group block">
+                        <h2 className="text-2xl md:text-3xl leading-tight font-semibold group-hover:underline">
+                          {post.title}
+                        </h2>
+                        <p className="mt-3 text-base md:text-lg text-muted-foreground">
+                          {post.description}
+                        </p>
+                      </Link>
+                      <div className="mt-4 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+                        <Calendar className="h-4 w-4" />
+                        <span>{post.date}</span>
+                        <span>•</span>
+                        <Clock className="h-4 w-4" />
+                        <span>{post.readTime}</span>
+                      </div>
                     </div>
+                    {post.image ? (
+                      <div className="w-full md:w-60 flex-shrink-0">
+                        <Image
+                          src={post.image}
+                          alt=""
+                          width={480}
+                          height={270}
+                          className="h-auto w-full rounded-md object-cover"
+                        />
+                      </div>
+                    ) : null}
                   </div>
-                  {post.image ? (
-                    <div className="w-full md:w-60 flex-shrink-0">
-                      <img
-                        src={post.image}
-                        alt=""
-                        className="w-full h-auto rounded-md object-cover"
-                      />
-                    </div>
-                  ) : null}
-                </div>
-              </article>
-            ))}
-          </section>
+                </article>
+              ))}
+            </section>
+          ) : (
+            <section className="rounded-md border border-border p-6">
+              <h2 className="text-2xl font-semibold">No posts yet</h2>
+              <p className="mt-3 text-muted-foreground">
+                I&apos;ll use this space for engineering notes, project
+                writeups, and things I learn while building.
+              </p>
+            </section>
+          )}
         </main>
       </div>
     </div>
