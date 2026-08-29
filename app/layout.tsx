@@ -32,9 +32,21 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Mohsen Khouaja | Portfolio",
+  title: "Mohsen Khouaja",
   description:
-    "Mohsen Khouaja's software engineering portfolio",
+    "Full-Stack Software Engineer & Engineering Student at SUP'COM building reliable full-stack systems.",
+  openGraph: {
+    title: "Mohsen Khouaja",
+    description:
+      "Full-Stack Software Engineer & Engineering Student at SUP'COM building reliable full-stack systems.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Mohsen Khouaja",
+    description:
+      "Full-Stack Software Engineer & Engineering Student at SUP'COM building reliable full-stack systems.",
+  },
   icons: {
     icon: [
       {

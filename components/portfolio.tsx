@@ -1,8 +1,9 @@
-import { ArrowUpRight, Github, Linkedin, Mail, Phone } from "lucide-react";
+import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 import { PortfolioClientControls } from "@/components/portfolio-client";
+import { ProjectsSectionPrototype } from "@/components/projects-section-prototype";
 import { Button } from "@/components/ui/button";
 import MohsenImg from "@/app/data/images/mohsen-khouaja.jpeg";
 
@@ -182,100 +183,7 @@ export function PortfolioComponent() {
             </ul>
           </section>
 
-          <section id="projects">
-            <div className="mb-6 flex items-end justify-between gap-4">
-              <h2 className="text-2xl font-semibold">Selected Projects</h2>
-              <span className="hidden text-sm text-muted-foreground sm:block">
-                Product work &amp; systems thinking
-              </span>
-            </div>
-            <div className="divide-y divide-border border-y border-border">
-              <article className="py-7 first:pt-6">
-                <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
-                  <div className="max-w-xl">
-                    <h3 className="text-xl font-semibold text-balance">
-                      MarkDeck
-                    </h3>
-                    <p className="mt-2 leading-7 text-muted-foreground text-pretty">
-                      A collaborative presentation workspace that turns
-                      LLM-generated Markdown into structured slide decks.
-                      React, Vite, TypeScript, Node.js, Express, and MySQL;
-                      with role-based sharing, Dockerized services, CI/CD, and
-                      Grafana/Loki observability.
-                    </p>
-                  </div>
-                  <div className="flex shrink-0 flex-wrap gap-x-4 gap-y-2 text-sm font-medium">
-                    <a
-                      href="https://markdeck.xyz/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-primary underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
-                    >
-                      Visit site <ArrowUpRight className="h-3.5 w-3.5" />
-                    </a>
-                    <a
-                      href="https://github.com/MohsenKhouaja/MarkDeck"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-muted-foreground underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
-                    >
-                      Repository <Github className="h-3.5 w-3.5" />
-                    </a>
-                  </div>
-                </div>
-              </article>
-              <article className="py-7">
-                <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
-                  <div className="max-w-xl">
-                    <h3 className="text-xl font-semibold text-balance">SREs</h3>
-                    <p className="mt-2 leading-7 text-muted-foreground text-pretty">
-                      A multi-agent incident-response system for site reliability
-                      engineers. Python, LangGraph, and LangChain agents inspect
-                      logs, metrics, and events in parallel, while human approval
-                      gates remediation. Built with Next.js, FastAPI, MongoDB,
-                      Prometheus, Loki, Docker Compose, and Dokploy CI/CD.
-                    </p>
-                  </div>
-                  <div className="flex shrink-0 flex-wrap gap-x-4 gap-y-2 text-sm font-medium">
-                    <a
-                      href="https://trysres.xyz/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-primary underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
-                    >
-                      Visit site <ArrowUpRight className="h-3.5 w-3.5" />
-                    </a>
-                    <a
-                      href="https://github.com/MohsenKhouaja/SREs"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-muted-foreground underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
-                    >
-                      Repository <Github className="h-3.5 w-3.5" />
-                    </a>
-                  </div>
-                </div>
-              </article>
-              <article className="py-7 last:pb-6">
-                <div className="flex flex-col gap-3 sm:flex-row sm:items-baseline sm:justify-between">
-                  <p className="max-w-xl leading-7 text-muted-foreground text-pretty">
-                    <span className="font-semibold text-foreground">
-                      Competitive Programming
-                    </span>{" "}
-                    — Codeforces Pupil with a maximum rating of 1292.
-                  </p>
-                  <a
-                    href="https://codeforces.com/profile/MohsenKhouaja"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex shrink-0 items-center gap-1 text-sm font-medium text-muted-foreground underline decoration-border underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
-                  >
-                    See profile <ArrowUpRight className="h-3.5 w-3.5" />
-                  </a>
-                </div>
-              </article>
-            </div>
-          </section>
+          <ProjectsSectionPrototype />
 
           <section id="education">
             <h2 className="mb-6 text-2xl font-semibold">Education</h2>
@@ -363,7 +271,7 @@ export function PortfolioComponent() {
         </main>
 
         <footer className="mt-16 text-center text-muted-foreground">
-          <p>Last updated: 28 Aug 2026</p>
+          <p>Last updated: 29 Aug 2026</p>
         </footer>
       </div>
     </div>

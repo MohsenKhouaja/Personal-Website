@@ -6,4 +6,4 @@ I am Mohsen Khouaja, a full-stack software engineer at Lanci LLC and an engineer
 
 The site is built with Next.js, Tailwind CSS, and Vercel Analytics.
 
-Last updated: 28 Aug 2026.
+Last updated: 29 Aug 2026.
